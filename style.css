@@ -1,0 +1,732 @@
+:root {
+	--bgcolor: #232323;
+	--bgimg: url(https://i.ibb.co/WtDS3Pr/broken-noise-2-X.png);
+	
+	--dark1: #171717;
+	--dark2: #272727;
+	--dark3: #373737;
+	--dark4: #202020;
+	--accent: #a24e35;
+	--subcent: #513a29;
+	--tricent: #9e6148;
+	--spungold: #76563e;
+	--textcolor: #8a8a8a;
+	--stone: #373737;
+	--serifheader: 'vulturaregular';
+	--serifsubheader: 'Bodoni Moda';
+
+	--cagliostro: #ad4d43;
+	--farnessa: #714e88;
+	--atmahata: #486148;
+	--tarpuz: #466586;
+	--elsewhere: #6b584d;
+	
+	--psubcagliostro: #675554;
+	--psubfarnessa: #695e67;
+	--psubatmahata: #4c5047;
+	--psubtarpuz: #444c52;
+	--psubunaligned: #3a3935;
+
+	--ltabcagliostro: #6f3a37;
+	--ltabfarnessa: #59376f;
+	--ltabatmahata: #3d4832;
+	--ltabtarpuz: #34495f;
+	--ltabelsewhere: #484441;
+
+	--chronicler: #697b96;
+	--marionette: #a53956;
+	--vagrant: #797979;
+
+	--vestal: #58704a;
+	--architect: #3a6f66;
+	--chevalier: #477290;
+	--catalyst: #8e4341;
+	--strategist: #855538;
+	--orator: #6d5d38;
+	--maverick: #474d83;
+	--crypter: #674c83;
+	--luminary: #7c456c;
+
+	--fire: #e44d4d;
+	--water: #6988c1;
+	--wind: #73ad73;
+	--earth: #bd845c;
+	--thunder: #c77cbe;
+	--ice: #b5cbde;
+	--light: #c5bb86;
+	--dark: #947794;
+}
+
+.vagrant, a.user-tagged.mgroup-3 { color: var(--vagrant); }
+.vestal, a.user-tagged.mgroup-6 { color: var(--vestal); }
+.architect, a.user-tagged.mgroup-7 { color: var(--architect); }
+.chevalier, a.user-tagged.mgroup-8 { color: var(--chevalier); }
+.catalyst, a.user-tagged.mgroup-9 { color: var(--catalyst); }
+.strategist, a.user-tagged.mgroup-10 { color: var(--strategist); }
+.orator, a.user-tagged.mgroup-11 { color: var(--orator); }
+.maverick, a.user-tagged.mgroup-12 { color: var(--maverick); }
+.crypter, a.user-tagged.mgroup-13 { color: var(--crypter); }
+.luminary, a.user-tagged.mgroup-14 { color: var(--luminary); }
+
+.chronicler, a.user-tagged.mgroup-4 { color: var(--chronicler); }
+.marionette, a.user-tagged.mgroup-15 { color: var(--marionette); }
+
+body {
+	background-color: var(--bgcolor);
+	background-image: var(--bgimg);
+	background-attachment: fixed;
+	background-size: 476px 476px;
+	margin: 0; padding: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	color: var(--textcolor);
+}
+
+a:link, a:visited, a:active {
+	text-decoration: none;
+	color: var(--accent);
+	transition: all ease 0.4s;
+}
+
+a:hover {
+	color: var(--subcent);
+}
+
+select, input {
+	color: var(--textcolor);
+	background: var(--dark2);
+	border-radius: 0px;
+	border: 2px solid var(--subcent);
+	font-family: Hind;
+	font-size: 10px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 3px 5px 2px 5px;
+}
+
+#scalesteel {
+	width: 1260px;
+	background-color: var(--bgcolor);
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+#sasnav {
+	position: fixed;
+	width: 60px;
+	height: 100vh;
+	background-color: var(--dark1);
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 20px 10px;
+}
+
+#sascon {
+	width: 1200px;
+	position: relative;
+	box-sizing: border-box;
+	overflow: hidden;
+	left: 60px;
+}
+
+.sasnav-home {
+	font-family: 'Kumar One';
+	font-size: 18px;
+	width: 30px;
+	height: 30px;
+	border: 1px solid;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 3px;
+	box-sizing: border-box;
+	text-transform: lowercase;
+}
+
+.sasnav-links {
+	margin: 30px 0;
+	font-size: 18px;
+	display: flex;
+	flex-direction: column;
+}
+
+.sasnav-links a { margin-bottom: 15px; }
+
+.sasnav-links .modal-link {
+	color: var(--subcent);
+}
+
+.sasnav-links .modal-link:hover { color: var(--dark3); }
+
+.modal-content {
+	display: none;
+}
+
+#fade-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #171717cc;
+	background: rgb(23,23,23);
+background: linear-gradient(34deg, rgba(23,23,23,1) 0%, rgba(41,27,27,0.85) 65%, rgba(48,18,18,0.75) 100%);
+	z-index: 99999;
+}
+
+#modal-window {
+	position: fixed;
+	width: 700px;
+	height: 550px;
+	top: calc(50% - 275px);
+	left: calc(50% - 350px);
+	background-color: var(--dark2);
+	z-index: 99999;
+	border-radius: 3px;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+#modal-map {
+	position: fixed;
+	width: 500px;
+	height: 350px;
+	top: calc(50% - 275px);
+	left: calc(50% - 350px);
+	background-color: var(--dark2);
+	z-index: 99999;
+	border-radius: 3px;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+.sas-main {
+	width: 100%;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.sas-navtree {
+	width: 100%;
+	height: 50px;
+	background: var(--dark4);
+	box-sizing: border-box;
+	width: calc(100% + 60px);
+	position: relative;
+	top: -30px;
+	left: -30px;
+	margin-bottom: 0px;
+}
+
+#navi {
+	height: 50px;
+	box-sizing: border-box;
+	padding: 0 20px;
+	display: flex;
+	align-items: center;
+	font-family: Hind;
+	font-weight: 700;
+	font-size: 10px;
+	text-transform: uppercase;
+}
+
+#navi a {
+	margin-right: 30px;
+	background: #1c1c1c;
+	padding: 3px 5px 1px 5px;
+	border-radius: 2px;
+	border: 2px solid var(--dark2);
+}
+
+.sas-main {
+	padding: 30px;
+}
+
+#worldmap {
+	width: calc(100% + 60px);
+	left: -30px;
+	top: -30px;
+	position: relative;
+	background-color: var(--dark2);
+	display: flex;
+	flex-direction: column;
+}
+
+#mapcontain {
+	width: 100%;
+	height: 843px;
+	position: relative;
+	overflow: hidden;
+}
+
+.map {
+	position: absolute;
+	width: 100%;
+	height: 843px;
+	background-image: url(https://assets.codepen.io/2434198/image.png);
+	background-size: cover;
+	background-color: #33333350;
+	filter: contrast(1.35) saturate(0.65) brightness(0.85);
+}
+
+.legend {
+	width: 100%;
+	height: 240px;
+	background-image: url(https://i.ibb.co/PrnnXgC/maplegendbg.png);
+	background-color: var(--dark1);
+	background-position: center;
+	background-size: 100%;
+	box-sizing: border-box;
+	padding: 30px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.legend h1 {
+	font-family: 'Poppins';
+	font-size: 13px;
+	width: 260px;
+	color: var(--textcolor);
+	text-transform: uppercase;
+	line-height: 280%;
+	font-weight: 800;
+	letter-spacing: 3px;
+	user-select: none;
+	margin: 0 50px 0 0;
+}
+
+.legend h1 b {
+	font-size: 72px;
+	font-family: 'vulturaregular';
+	color: var(--spungold);
+	text-transform: lowercase;
+	font-weight: 700;
+	letter-spacing: 0px;
+	margin-left: -2px;
+}
+
+.leg-factions, .leg-points {
+	width: 300px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.leg-factions h1, .leg-points h1 {
+	width: 100%;
+	font-size: 11px;
+	color: var(--spungold);
+}
+
+.facemb {
+	width: 60px;
+	position: relative;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0.5; -moz-opacity: 0.5;
+	filter: saturate(0) contrast(1.12) brightness(1.5);
+	transition: all ease 0.4s;
+}
+
+.facemb-active {
+	opacity: 1; -moz-opacity: 1;
+	filter: saturate(1) contrast(1.05) brightness(1.5);
+}
+
+.facemb img {	
+	position: relative;
+	user-select: none;
+	margin: 0px 10px;
+}
+
+.facemb.cagliostro img { width: 59px; }
+.facemb.farnessa img { width: 69px; top: 1px; }
+.facemb.atmahata img { width: 65px; left: 1px; }
+.facemb.tarpuz img { width: 64px; top: 1px; }
+
+.facemb.cagliostro::before { background: var(--cagliostro); }
+.facemb.farnessa::before { background: var(--farnessa); }
+.facemb.atmahata::before { background: var(--atmahata); }
+.facemb.tarpuz::before { background: var(--tarpuz); }
+
+.tog-features {
+	border-radius: 2px;
+	border: 1px solid var(--subcent);
+	background: var(--dark2);
+	color: var(--tricent);
+	padding: 3px 7px 2px 7px;
+	font-family: Hind;
+	font-size: 11px;
+	font-weight: 700;
+	cursor: pointer;
+	transition: all ease 0.4s;
+	outline: none;
+}
+
+.tog-featactive {
+	border: 1px solid var(--dark2);
+	background: var(--dark4);
+	color: #5f5f5f;
+}
+
+.territories, .towns, .dungeons, .landmarks, .mappopup {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transition: all ease 0.4s;
+	visibility: visible;
+	opacity: 1; -moz-opacity: 1;
+}
+
+.area {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	mix-blend-mode: color;
+	filter: saturate(1.25) brightness(1.5);
+	opacity: 0; -moz-opacity: 0;
+	transition: all ease 0.4s;
+}
+
+.area.cagliostro {	background-image: url(https://i.ibb.co/sbS8pXB/area-cagliostro.png); }
+
+.area.farnessa {	background-image: url(https://i.ibb.co/W3vStQv/area-farnessa.png); }
+
+.area.atmahata {	background-image: url(https://i.ibb.co/XLWWbnf/area-atmahata.png);}
+
+.area.tarpuz {	background-image: url(https://i.ibb.co/hLWT2JS/area-tarpuz.png); }
+
+.area-active {	opacity: 0.5;	-moz-opacity: 0.5; }
+
+.landmark {
+	color: #efefef;
+	font-family: 'Bodoni Moda';
+	font-size: 14px;
+	font-weight: 700;
+	font-style: italic;
+	user-select: none;
+	position: absolute;
+	text-shadow: 0px 0px 5px var(--dark2), 0px 0px 10px var(--dark2);
+}
+
+.agrippansea { top: 30%; left: 13%; }
+.orsterrabay { top: 56%; left: 45.5%; }
+.gulfdiomedes { top: 50%; left: 64.5%; }
+.abyssalwilds { top: 9%; right: 18%; }
+.fereianrange { bottom: 13%; right: 13%; }
+.marsalidesert { bottom: 5%; left: 40%; }
+.silenttundra { top: 11%; left: 49%; }
+.redbluffs { top: 47%; left: 7%; }
+.goldshoreestuary { bottom: 30.5%; right: 3.5%; }
+
+.capital {
+	position: absolute;
+	width: 6px;
+	height: 6px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	z-index: 10;
+}
+
+.capital::before {
+	position: absolute;
+	content: "\f0a3";
+	font-family: "Font Awesome 5 Pro";
+	font-size: 17px;
+	font-weight: 700;
+	color: goldenrod;
+	text-shadow: 0px 0px 5px var(--dark4), 0px 0px 10px var(--dark1);
+}
+
+.capital::after {
+	position: absolute;
+	content: " ";
+	width: 7px;
+	height: 7px;
+	background: white;
+	border-radius: 50%;
+	mix-blend-mode: overlay;
+}
+
+.town {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: white;
+	box-sizing: border-box;
+	border: 5px solid var(--tricent);
+	box-shadow: 0px 0px 5px var(--dark1), 0px 0px 10px var(--dark4);
+	cursor: pointer;
+	z-index: 10;
+}
+
+.capital.almadel { top: 27.5%; left: 35.25%; }
+.town.velario { top: 18%; left: 27.65%; }
+.town.trieste { top: 18.8%; left: 34.2%; }
+.town.swarkii { top: 38.2%; left: 38.5%; }
+.town.pallimonte { top: 53.8%; left: 31.3%; }
+.town.ronove { top: 54.8%; left: 15%; }
+.town.orewell { bottom: 38%; left: 9.5%; }
+.town.asclepia { bottom: 22%; left: 14.8%; }
+.town.saintsbridge { bottom: 27.5%; left: 27%; }
+
+.capital.tharsis { top: 40.8%; left: 48.3%; }
+.town.atlasdam { top: 45%; left: 52.7%; }
+.town.karst { top: 27.3%; left: 48.6%; }
+.town.invernus { top: 13.6%; left: 44.5%; }
+.town.judex { top: 32.2%; left: 61.3%; }
+.town.vespermill { top: 22.3%; right: 29.4%; }
+
+.capital.samsara { bottom: 14.8%; right: 35%; }
+.town.marsalim { bottom: 11.5%; left: 46.8%; }
+.town.sunshade { bottom: 31.3%; left: 48.3%; }
+.town.kabulshahi { bottom: 18.1%; left: 47%; }
+.town.beizi { bottom: 28.5%; right: 39%; }
+.town.iwahate { bottom: 28.2%; right: 26.1%; }
+
+.capital.grandport { top: 46%; right: 7%; }
+.town.goldshore { bottom: 39.3%; right: 9.3%; }
+.town.ersatz { bottom: 43%; right: 40%; }
+.town.cargobay { bottom: 45.8%; right: 14.7%; }
+
+.dungeon {
+	position: absolute;
+	width: 13px;
+	height: 13px;
+	background: goldenrod;
+	border: 4px solid var(--dark1);
+	box-sizing: border-box;
+	transform: rotate(45deg);
+	cursor: pointer;
+	z-index: 10;
+}
+
+.dungeon.ruinsofeld { top: 15%; left: 28.2%; }
+.dungeon.lemegeton { top: 21.5%; left: 32.8%; }
+.dungeon.forgottengrotto { top: 33%; left: 30%; }
+.dungeon.whisperwood { top: 40.5%; left: 35.5%; }
+.dungeon.bolderfallpass { top: 44%; left: 27.6%; }
+.dungeon.carrioncaves { top: 56%; left: 28%; }
+.dungeon.clearbrook { bottom: 39%; left: 36.5%; }
+.dungeon.thequarry { bottom: 44.7%; left: 18%; }
+.dungeon.rubeh { bottom: 41.3%; left: 7.5%; }
+.dungeon.dragonsongfane { bottom: 32.3%; left: 12.3%; }
+.dungeon.murkwood { bottom: 29.8%; left: 23.5%; }
+.dungeon.refugeruins { bottom: 19.3%; left: 14.8%; }
+.dungeon.calenhad { bottom: 13.5%; left: 27.3%; }
+.dungeon.twinfalls { bottom: 26.5%; left: 37.8%; }
+.dungeon.farshore { bottom: 18.5%; left: 34.8%; }
+
+.dungeon.hoarfrost { top: 29.5%; left: 42.3%; }
+.dungeon.valentine { top: 9.2%; left: 36%; }
+.dungeon.icedragmaw { top: 19%; left: 47%; }
+.dungeon.imperator { top: 22%; left: 44.7%; }
+.dungeon.whitewood { top: 21%; left: 50%; }
+.dungeon.lorncath { top: 11%; left: 45.2%; }
+.dungeon.obsidianpar { top: 22.5%; right: 44.7%; }
+.dungeon.hollowthrone { top: 33.84%; right: 44.4%; }
+.dungeon.origincave { top: 39%; right: 48%; }
+.dungeon.whistlewood { top: 41.2%; right: 46.5%; }
+.dungeon.purgation { top: 21.2%; right: 37.5%; }
+.dungeon.ebony { top: 24.5%; right: 27%; }
+
+.dungeon.sunshadecata { bottom: 30.5%; left: 44.5%; }
+.dungeon.lizardden { bottom: 22%; left: 44.2%; }
+.dungeon.whistling { bottom: 28.7%; right: 46.7%; }
+.dungeon.circleproving { bottom: 22.5%; right: 49.3%; }
+.dungeon.quicksand { bottom: 21.4%; right: 46.3%; }
+.dungeon.blackmarket { bottom: 15.5%; left: 43.9%; }
+.dungeon.royalcata { bottom: 12.8%; left: 41.4%; }
+.dungeon.enlighten { bottom: 32.6%; right: 40.2%; }
+.dungeon.untouchedsanc { bottom: 33.8%; right: 34.5%; }
+.dungeon.tombkings { bottom: 19.8%; right: 39.2%; }
+.dungeon.lotusdais { bottom: 10.1%; right: 37.7%; }
+.dungeon.ancestorshrine { bottom: 10.6%; right: 34.7%; }
+.dungeon.centralpass { bottom: 24.2%; right: 32.3%; }
+.dungeon.suliespla { bottom: 33%; right: 27%; }
+.dungeon.spectrewood { bottom: 28.5%; right: 19.8%; }
+
+.dungeon.undertow { bottom: 46.5%; right: 41.7%; }
+.dungeon.maiya { bottom: 41%; right: 41%; }
+.dungeon.moonstruck { bottom: 38%; right: 23.5%; }
+.dungeon.captainsbain { bottom: 44%; right: 17.8%; }
+.dungeon.sapphire { bottom: 43%; right: 14%; }
+.dungeon.goldshorecath { bottom: 42%; right: 9%; }
+.dungeon.seaside { bottom: 35%; right: 10.5%; }
+.dungeon.azurecave { bottom: 38%; right: 2.75%; }
+.dungeon.saltlochs { bottom: 49.8%; right: 13.5%; }
+.dungeon.lostking { top: 47.5%; right: 12.7%; }
+.dungeon.amphitheatre { top: 44%; right: 8.6%; }
+
+.modalmap {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #171717cc;
+	background: rgb(23,23,23);
+background: linear-gradient(34deg, rgba(23,23,23,1) 0%, rgba(41,27,27,0.85) 65%, rgba(48,18,18,0.75) 100%);
+	z-index: 15;
+	opacity: 0; -moz-opacity: 0;
+	visibility: hidden;
+	transition: all ease 0.4s;
+}
+
+.modalmap::before {
+	content: " ";
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ background-attachment: fixed;
+ background: transparent;
+ background-image: radial-gradient(var(--subcent) 5%, transparent 0);
+ background-size: 40px 40px;
+ transform-origin: center;
+ opacity: 0.75; -moz-opacity: 0.75;
+}
+
+.modalexit {
+	position: absolute;
+	z-index: 20;
+	cursor: pointer;
+	top: calc(50% - 200px + 20px);
+	right: calc(50% - 275px + 20px);
+	opacity: 0.5; -moz-opacity: 0.5;
+	transition: all ease 0.4s;
+}
+
+.modalexit:hover { opacity: 1; -moz-opacity: 1; }
+
+.modalexit::before {
+	content: "\eacc";
+	font-family: 'honeybee';
+	font-size: 18px;
+	color: var(--tricent);
+}
+
+.modalpop {
+	position: relative;
+	width: 550px;
+	height: 400px;
+	background: var(--dark2);
+	z-index: 15;
+	border-radius: 2px;
+	box-shadow: 0px 0px 20px #00000033, 0px 0px 50px #00000005;
+	box-sizing: border-box;
+	padding: 40px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.modalhead {
+	display: flex;
+	align-items: center;
+	border-bottom: 2px solid var(--dark3);
+	padding-bottom: 20px;
+}
+
+.modalemb {
+	width: 80px;
+	height: 80px;
+	margin-right: 20px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.modalemb.cagliostro {
+	background-image: url("https://assets.codepen.io/2434198/emblem-cagliostro.svg");
+	background-size: 70%;
+}
+
+.modalpop h1 {
+	font-family: var(--serifheader);
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 100%;
+	margin: 0; padding: 0;
+	color: var(--tricent);
+}
+
+.modalpop h2 {
+	font-family: Poppins;
+	font-size: 9px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	display: inline-block;
+	color: var(--textcolor);
+	background: var(--dark4);
+	margin: 5px 0 0 0;
+	padding: 5px 5px 3px 9px;
+}
+
+.modalpop p {
+	margin: 20px;
+	font-family: 'Amiri';
+	font-size: 16px;
+	line-height: 150%;
+	max-height: 135px;
+}
+
+.modalpop p b { color: var(--spungold); }
+
+.modalgoto {
+	text-align: right;
+	font-family: Hind;
+	font-weight: 700;
+	font-size: 12px;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	border-top: 2px solid var(--dark3);
+	padding-top: 5px;
+}
+
+.modalgoto a b {
+	border-bottom: 3px solid var(--dark3);
+}
+
+.modalgoto a::after {
+	content: "\f33b";
+	font-family: "Font Awesome 5 Pro";
+	font-weight: 400;
+	font-size: 22px;
+	margin-left: 10px;
+	position: relative;
+	top: 6px;
+	color: var(--subcent);
+}
+
+.toggle-active { 
+	visibility: hidden;
+	opacity: 0; -moz-opacity: 0;
+}
+
+.togmodal {
+	visibility: visible!important; 
+	opacity: 1; -moz-opacity: 1;
+}

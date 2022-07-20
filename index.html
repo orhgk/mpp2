@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - scale &amp; steel. — world map.</title>
+  <link rel='stylesheet' href='https://fonts.gstatic.com'>
+<link rel='stylesheet' href='https://assets.codepen.io/2434198/theicons.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"rel="stylesheet'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,400;1,700&amp;display=0;0,400;0,700;1,30swap'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&amp;display=swap'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Kumar+One&amp;family=Kumar+One+Outline&amp;display=swap'>
+<link rel='stylesheet' href='https://assets.codepen.io/2434198/Vultura.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap'>
+<link rel='stylesheet' href='https://assets.codepen.io/2434198/griffinandebeth.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-yJpxAFV0Ip/w63YkZfDWDTU6re/Oc3ZiVqMa97pi8uPt92y0wzeK3UFM2yQRhEom" crossorigin="anonymous">
+
+<div id="scalesteel">
+	<div id="sasnav">
+		
+		<a href="#">
+		<div class="sasnav-home">
+			A
+		</div>
+		</a>
+		
+		<div class="sasnav-links">
+			<a href="#" class="modal-link" data-modal-target="sas-modal-qlinks" title="site navigation"><span class="icon-ui-73"></span></a>
+			<a href="#" class="modal-link" data-modal-target="sas-modal-userprof" title="user profile"><span class="icon-phone-14"></span></a>
+			<a href="#" class="modal-link" title="world map"><span class="icon-ui-77"></span></a>
+		</div>
+	</div>
+	
+	<div id="sascon">
+		<div class="sas-main">
+			<div class="sas-navtree">
+				<div id="navi">
+					<a href="#">aletheia</a>
+					<a href="#">category</a>
+					<a href="#">board</a>
+					viewing profile
+				</div>
+			</div>
+			
+			<div id="worldmap">
+				<div class="legend">
+					<h1>the realm of <b>orsterra</b></h1>
+					<div class="leg-factions">
+						<h1>factions</h1>
+						<div title="the republic of cagliostro" class="facemb cagliostro"><img src="https://assets.codepen.io/2434198/emblem_cagliostro.png" /></div>
+						<div title="the holy see of farnessa" class="facemb farnessa"><img src="https://assets.codepen.io/2434198/emblem_farnessa.png" /></div>
+						<div title="the royal kingdom of atmahata" class="facemb atmahata"><img src="https://assets.codepen.io/2434198/emblem_atma.png" /></div>
+						<div title="the sovereign state of tarpuz" class="facemb tarpuz"><img src="https://assets.codepen.io/2434198/emblem_tarpuz.png" /></div>
+					</div>
+					<div class="leg-points">
+						<h1>features</h1>
+						<button class="tog-features tog-sanctuaries">cities & towns</button>
+						<button class="tog-features tog-dungeons">places of interest</button>
+						<button class="tog-features tog-landmarks">landmarks</button>
+					</div>
+				</div>
+				<div id="mapcontain">
+					<div class="map"></div>
+					
+					<div class="territories">
+						<div class="area cagliostro"></div>
+						<div class="area farnessa"></div>
+						<div class="area atmahata"></div>
+						<div class="area tarpuz"></div>
+					</div>
+					
+					<div class="landmarks">
+						<div class="landmark agrippansea">Agrippan Sea</div>
+						<div class="landmark orsterrabay">Orsterra Bay</div>
+						<div class="landmark gulfdiomedes">Gulf of Diomedes</div>
+						<div class="landmark fereianrange">Fereian Range</div>
+						<div class="landmark marsalidesert">Marsali Desert</div>
+						<div class="landmark silenttundra">Silent Tundra</div>
+						<div class="landmark redbluffs">The Red Bluffs</div>
+						<div class="landmark goldshoreestuary">Goldshore Estuary</div>
+						<div class="landmark abyssalwilds">Abyssal Wilds</div>
+					</div>
+					
+					<div class="towns">
+						<div title="almadel" class="capital almadel"></div>
+						
+						<div title="velario" class="town velario"></div>
+						<div title="trieste" class="town trieste"></div>
+						<div title="s'warkii" class="town swarkii"></div>
+						<div title="pallimonte" class="town pallimonte"></div>
+						<div title="ronove" class="town ronove"></div>
+						<div title="orewell" class="town orewell"></div>
+						<div title="asclepia" class="town asclepia"></div>
+						<div title="saintsbridge" class="town saintsbridge"></div>
+						
+						<div title="tharsis" class="capital tharsis"></div>
+						<div title="atlasdam" class="town atlasdam"></div>
+						<div title="karst" class="town karst"></div>
+						<div title="invernus" class="town invernus"></div>
+						<div title="judex" class="town judex"></div>
+						<div title="vespermill" class="town vespermill"></div>
+						
+						<div title="samsara" class="capital samsara"></div>
+						<div title="marsalim" class="town marsalim"></div>
+						<div title="sunshade" class="town sunshade"></div>
+						<div title="kabul shahi" class="town kabulshahi"></div>
+						<div title="beizi temple" class="town beizi"></div>
+						<div title="iwahate" class="town iwahate"></div>
+						
+						<div title="grandport" class="capital grandport"></div>
+						<div title="goldshore" class="town goldshore"></div>
+						<div title="ersatz" class="town ersatz"></div>
+						<div title="cargo bay" class="town cargobay"></div>
+						
+					</div>
+
+					<div class="dungeons">
+						<div title="ruins of eld" class="dungeon ruinsofeld"></div>
+						<div title="forest of lemegeton" class="dungeon lemegeton"></div>
+						<div title="forgotten grotto" class="dungeon forgottengrotto"></div>
+						<div title="the whisperwood" class="dungeon whisperwood"></div>
+						<div title="bolderfall pass" class="dungeon bolderfallpass"></div>
+						<div title="carrion caves" class="dungeon carrioncaves"></div>
+						<div title="clearbrook" class="dungeon clearbrook"></div>
+						<div title="the quarry" class="dungeon thequarry"></div>
+						<div title="forest of rubeh" class="dungeon rubeh"></div>
+						<div title="dragonsong fane" class="dungeon dragonsongfane"></div>
+						<div title="murkwood" class="dungeon murkwood"></div>
+						<div title="refuge ruins" class="dungeon refugeruins"></div>
+						<div title="isle of calenhad" class="dungeon calenhad"></div>
+						<div title="twinfalls" class="dungeon twinfalls"></div>
+						<div title="farshore cave" class="dungeon farshore"></div>
+						
+						<div title="hoarfrost grotto" class="dungeon hoarfrost"></div>
+						<div title="ruins of valentine" class="dungeon valentine"></div>
+						<div title="maw of the ice dragon" class="dungeon icedragmaw"></div>
+						<div title="tomb of the imperator" class="dungeon imperator"></div>
+						<div title="whitewood" class="dungeon whitewood"></div>
+						<div title="lorn cathedral" class="dungeon lorncath"></div>
+						<div title="obsidian parlor" class="dungeon obsidianpar"></div>
+						<div title="the hollow throne" class="dungeon hollowthrone"></div>
+						<div title="cave of origin" class="dungeon origincave"></div>
+						<div title="whistlewood" class="dungeon whistlewood"></div>
+						<div title="forest of purgation" class="dungeon purgation"></div>
+						<div title="ebony grotto" class="dungeon ebony"></div>
+						
+						<div title="sunshade catacombs" class="dungeon sunshadecata"></div>
+						<div title="lizardmen's den" class="dungeon lizardden"></div>
+						<div title="whistling caverns" class="dungeon whistling"></div>
+						<div title="circle of proving" class="dungeon circleproving"></div>
+						<div title="quicksand caves" class="dungeon quicksand"></div>
+						<div title="the black market" class="dungeon blackmarket"></div>
+						<div title="royal catacombs" class="dungeon royalcata"></div>
+						<div title="the path to enlightenment" class="dungeon enlighten"></div>
+						<div title="untouched sanctum" class="dungeon untouchedsanc"></div>
+						<div title="tomb of kings" class="dungeon tombkings"></div>
+						<div title="the lotus dais" class="dungeon lotusdais"></div>
+						<div title="ancestor's shrine" class="dungeon ancestorshrine"></div>
+						<div title="central pass" class="dungeon centralpass"></div>
+						<div title="suliman's esplanade" class="dungeon suliespla"></div>
+						<div title="spectrewood" class="dungeon spectrewood"></div>
+						
+						<div title="undertow cave" class="dungeon undertow"></div>
+						<div title="cliffs of maiya" class="dungeon maiya"></div>
+						<div title="moonstruck coast" class="dungeon moonstruck"></div>
+						<div title="captain's bain" class="dungeon captainsbain"></div>
+						<div title="sapphire springs" class="dungeon sapphire"></div>
+						<div title="goldshore cathedral" class="dungeon goldshorecath"></div>
+						<div title="seaside grotto" class="dungeon seaside"></div>
+						<div title="caves of azure" class="dungeon azurecave"></div>
+						<div title="the salt lochs" class="dungeon saltlochs"></div>
+						<div title="lost king's slumber" class="dungeon lostking"></div>
+						<div title="grand amphitheatre" class="dungeon amphitheatre"></div>
+						
+					</div>
+					
+					<div class="mappopup">
+						<div class="modalmap almadel">
+							<div class="modalexit" title="close window"></div>
+							<div class="modalpop">
+								<div class="modalhead">
+									<div class="modalemb cagliostro"></div>
+									<div class="modaltitle">
+										<h1>almadel</h1>
+										<h2>the capital of cagliostro</h2>
+									</div>
+								</div>
+								<p>Formerly known as <b>Victor's Hollow</b>, this city was once home to the famed coliseum known across Orsterra. Now, the seat of power of the Consiglio resides here; the city a paragon of splendid architecture and fortified defenses.</p>
+								<div class="modalgoto"><a href="#"><b>go to forum</b></a></div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+	</div>
+</div>
+<!-- partial -->
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+<script src='https://assets.codepen.io/2434198/JQueryModalPopups.js'></script>
+<script src='https://kit.fontawesome.com/8a0b17fc57.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
